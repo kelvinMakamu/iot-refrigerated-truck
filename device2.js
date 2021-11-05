@@ -75,9 +75,9 @@ var ProvisioningDeviceClient = require('azure-iot-provisioning-device').Provisio
 var provisioningHost = 'global.azure-devices-provisioning.net';
 
 // Enter your Azure IoT keys.
-var idScope = '0ne004176BE';
+var idScope = '';
 var registrationId = 'RefrigeratedTruck2';
-var symmetricKey = '1DZmBHBrs5BWaNU83OBzyInYBKF+cHYSW4JnFMJXwCQ=';
+var symmetricKey = '';
 
 var provisioningSecurityClient = new SymmetricKeySecurityClient(registrationId, symmetricKey);
 var provisioningClient = ProvisioningDeviceClient.create(provisioningHost, idScope, new ProvisioningTransport(), provisioningSecurityClient);
@@ -88,7 +88,7 @@ var truckIdentification = "Truck number 1";
 var rest = require("azure-maps-rest");
 
 // Enter your Azure Maps key.
-var subscriptionKeyCredential = new rest.SubscriptionKeyCredential("g9nZhwNtiqMO58o7qqTIs__Bx9rB8OsWlvq8xCn_tk8");
+var subscriptionKeyCredential = new rest.SubscriptionKeyCredential("");
 
 // Azure Maps connection 
 var pipeline = rest.MapsURL.newPipeline(subscriptionKeyCredential);
